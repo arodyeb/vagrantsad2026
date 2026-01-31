@@ -58,6 +58,7 @@ iptables -t nat -A POSTROUTING -s 172.2.8.0/24 -o eth0 -j MASQUERADE
 iptables -t nat -A POSTROUTING -s 172.1.8.0/24 -o eth0 -j MASQUERADE
 
 # R2. Permitir acceso desde la WAN a www a través del 80 haciendo port forwarding
+iptables -t nat -A PREROUTING -i eth1 -p tcp --dport 80 -j DNAT --to-destination 172.1.8.3:80
 iptables -A FORWARD -i eth1 -o eth2 -s 203.0.113.0/24 -d 172.1.8.3 -p tcp --dport 80 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
 iptables -A FORWARD -i eth2 -o eth1 -d 203.0.113.0/24 -s 172.1.8.3 -p tcp --sport 80 -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
 
