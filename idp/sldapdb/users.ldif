@@ -1,0 +1,31 @@
+dn: uid=arodriguez,ou=ou_usuarios,dc=ary,dc=org
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: person
+cn: Aitor Rodriguez
+givenName: Aitor
+sn: Rodriguez
+uid: arodriguez
+uidNumber: 2000
+gidNumber: 10000
+homeDirectory: /home/arodriguez
+loginShell: /bin/bash
+userPassword: {SSHA}Bkf7D4+NkgR77amr/9iH/I4YbTL1Nb0H
+mail: arodriguez@ary.org
+
+dn: uid=jsanchez,ou=ou_usuarios,dc=ary,dc=org
+objectClass: top
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: person
+cn: Javier Sanchez
+givenName: Javier
+sn: Sanchez
+uid: jsanchez
+uidNumber: 2001
+gidNumber: 10001
+homeDirectory: /home/jsanchez
+loginShell: /bin/bash
+userPassword: {SSHA}Bkf7D4+NkgR77amr/9iH/I4YbTL1Nb0H
+mail: jsanchez@iescelia.org
